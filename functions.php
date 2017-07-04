@@ -100,4 +100,7 @@ function bplate_posted_on() {
 }
 endif;
 
+//Add Advanced Custom Fields (ACF). Comment line below out if ACF is not needed.
+require('includes/advanced-custom-fields/acf.php');
+
 ?>
