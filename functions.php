@@ -58,7 +58,7 @@ function bplate_scripts() {
 
     //Enqueue JQuery
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null, true);
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null, true);
     wp_enqueue_script('jquery');
 
 	//Enqueue Custom JS File
@@ -107,4 +107,9 @@ endif;
 //Add Advanced Custom Fields (ACF). Comment line below out if ACF is not needed.
 require('includes/advanced-custom-fields/acf.php');
 
+//Disable WordPress Emojis. The reasoning behind this is that the WP Emoji script is called in the head and this is render blocking.
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); 
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' ); 
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
 ?>
