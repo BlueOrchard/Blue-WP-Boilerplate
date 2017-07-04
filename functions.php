@@ -53,6 +53,9 @@ function bplate_scripts() {
     //Enqueue style.css
 	wp_enqueue_style( 'bplate-style', get_stylesheet_uri() );
 
+	//Enqueue Roboto Font (Regular, Semi-Bold and Bold Only)
+	wp_enqueue_style( 'bplate-font', "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" );
+
     //Enqueue JQuery
     wp_deregister_script('jquery');
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null, true);
