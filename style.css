@@ -8,7 +8,7 @@ Description: A Boilerplate theme for WordPress that has SCSS, Normalize, and Ven
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: blue-wp-boilderplate
+Text Domain: bplate
 */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -460,3 +460,4 @@ template {
 [hidden] {
   display: none;
 }
+
