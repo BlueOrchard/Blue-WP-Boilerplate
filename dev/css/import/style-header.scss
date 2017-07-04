@@ -1,0 +1,22 @@
+.site-header{
+    padding: 10px;
+    border-bottom: 1px solid $borderColor;
+}
+
+.main-navigation{
+    ul{
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        list-style: none;
+    }
+
+    li{
+        float: left;
+    }
+
+    a{
+        display: block;
+        padding: 5px 10px;
+    }
+}

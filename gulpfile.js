@@ -12,7 +12,7 @@ gulp.task('cssPack', function() {
         cssFiles,
         themeInfo;
 
-    sassFiles = gulp.src(devCSS + '*.scss')
+    sassFiles = gulp.src(devCSS + 'style-style-main.scss')
         .pipe(sass());
 
     cssFiles = gulp.src(devCSS + '*.css');
@@ -26,4 +26,5 @@ gulp.task('cssPack', function() {
 gulp.task('default', ['cssPack'], function() {
     gulp.watch(devCSS + '*.css', ['cssPack']);
     gulp.watch(devCSS + '*.scss', ['cssPack']);
+    gulp.watch(devCSS + 'import/*.scss', ['cssPack']);
 })
