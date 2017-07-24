@@ -461,6 +461,15 @@ template {
 }
 
 /* Global Variables */
+/* Border Box Box Sizing */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
 /* Typography: Handles the way fonts look. Also handles bottom margin of text. */
 html {
   font-family: 'Roboto', sans-serif;

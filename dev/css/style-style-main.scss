@@ -5,6 +5,14 @@ $linkHoverColor: #8c94d8;
 
 $borderColor: #DDD;
 
+/* Border Box Box Sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* Typography: Handles the way fonts look. Also handles bottom margin of text. */
 @import "import/style-typography";
 
