@@ -4,6 +4,7 @@ var merge = require('merge-stream');
 var concat = require('gulp-concat');
 var prefix = require('gulp-autoprefixer');
 var clean = require('gulp-clean-css');
+var wait = require('gulp-wait');
 
 var devCSS = 'dev/css/';
 
@@ -13,6 +14,7 @@ gulp.task('cssPack', function() {
         themeInfo;
 
     sassFiles = gulp.src(devCSS + 'style-style-main.scss')
+        .pipe(wait(500))
         .pipe(sass());
 
     cssFiles = gulp.src(devCSS + '*.css');

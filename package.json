@@ -9,6 +9,7 @@
     "gulp-clean-css": "^3.5.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
+    "gulp-wait": "0.0.2",
     "merge-stream": "^1.0.1",
     "node-sass": "^4.5.3"
   },
