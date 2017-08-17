@@ -51,7 +51,7 @@ add_action( 'widgets_init', 'bplate_widgets_init' );
 //Enqueue scripts and styles
 function bplate_scripts() {
     //Enqueue style.css
-	wp_enqueue_style( 'bplate-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bplate-style', get_template_directory_uri().'/public/css/style.min.css' );
 
 	//Enqueue Roboto Font (Regular, Semi-Bold and Bold Only)
 	wp_enqueue_style( 'bplate-font', "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" );
@@ -61,19 +61,19 @@ function bplate_scripts() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null, true);
     wp_enqueue_script('jquery');
 
-	//Enqueue Custom JS File
-	wp_register_script( 'customJS', get_template_directory_uri().'/public/js/custom.js', false, null, true);
-	wp_enqueue_script( 'customJS');
-
     //Enqueue Comment Reply script
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	//Enqueue Slick Slider - CSS is merged with main CSS file using SCSS. Be sure to uncomment the import in style-style-main.scss.
-	// -- Enqueue Javascript
-	wp_register_script( 'slickSlider', get_template_directory_uri().'/public/js/slick.min.js', false, null, true);
-	wp_enqueue_script( 'slickSlider');
+	// - Example initialization inside of custom.js. Be sure to uncomment that as well if you want to use it.
+	//wp_register_script( 'slickSlider', get_template_directory_uri().'/public/js/slick.min.js', false, null, true);
+	//wp_enqueue_script( 'slickSlider');
+
+	//Enqueue Custom JS File - Add custom JS here.
+	wp_register_script( 'customJS', get_template_directory_uri().'/public/js/custom.js', false, null, true);
+	wp_enqueue_script( 'customJS');
 }
 add_action( 'wp_enqueue_scripts', 'bplate_scripts' );
 
