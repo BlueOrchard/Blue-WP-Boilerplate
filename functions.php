@@ -70,7 +70,7 @@ function bplate_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	//Enqueue Slick Slider - CSS is merged with main CSS file using SCSS. Be sure to uncomment the import.
+	//Enqueue Slick Slider - CSS is merged with main CSS file using SCSS. Be sure to uncomment the import in style-style-main.scss.
 	// -- Enqueue Javascript
 	wp_register_script( 'slickSlider', get_template_directory_uri().'/public/js/slick.min.js', false, null, true);
 	wp_enqueue_script( 'slickSlider');
