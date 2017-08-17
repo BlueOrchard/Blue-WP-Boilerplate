@@ -24,3 +24,6 @@ html {
 
 /* Footer CSS */
 @import "import/style-footer";
+
+/* Slick Slider CSS. Be sure to uncomment this and the enqueue script + style in functions.php */
+@import "extra/slick"

@@ -29,4 +29,5 @@ gulp.task('default', ['cssPack'], function() {
     gulp.watch(devCSS + '*.css', ['cssPack']);
     gulp.watch(devCSS + '*.scss', ['cssPack']);
     gulp.watch(devCSS + 'import/*.scss', ['cssPack']);
+    gulp.watch(devCSS + 'extra/*.scss', ['cssPack']);
 })

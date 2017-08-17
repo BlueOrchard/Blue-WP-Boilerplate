@@ -69,6 +69,11 @@ function bplate_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	//Enqueue Slick Slider - CSS is merged with main CSS file using SCSS. Be sure to uncomment the import.
+	// -- Enqueue Javascript
+	wp_register_script( 'slickSlider', get_template_directory_uri().'/public/js/slick.min.js', false, null, true);
+	wp_enqueue_script( 'slickSlider');
 }
 add_action( 'wp_enqueue_scripts', 'bplate_scripts' );
 
