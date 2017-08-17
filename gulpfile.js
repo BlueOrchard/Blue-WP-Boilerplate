@@ -20,9 +20,16 @@ gulp.task('cssPack', function() {
     cssFiles = gulp.src(devCSS + '*.css');
 
     return merge(sassFiles, cssFiles)
-           .pipe(concat('style.css'))
+           .pipe(concat('style.min.css'))
            .pipe(prefix())
-           .pipe(gulp.dest("."));
+           .pipe(clean({
+                        level: {
+                            1: {
+                                specialComments : 0
+                            }
+                        }
+                        }))
+           .pipe(gulp.dest("./public/css/"));
 });
 
 gulp.task('default', ['cssPack'], function() {
